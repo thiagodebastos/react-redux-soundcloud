@@ -7,6 +7,8 @@
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.5",
+    "react-router-dom": "^4.1.1",
+    "react-router-redux": "^4.0.8",
     "redux": "^3.7.0"
   },
   "devDependencies": {
@@ -37,6 +39,7 @@
     "file-loader": "^0.11.2",
     "flow-bin": "^0.48.0",
     "fs-extra": "3.0.1",
+    "history": "^4.6.3",
     "html-webpack-plugin": "2.28.0",
     "jest": "^20.0.4",
     "object-assign": "4.1.1",
@@ -106,7 +109,9 @@
     ],
     "env": {
       "development": {
-        "plugins": ["react-hot-loader/babel"]
+        "plugins": [
+          "react-hot-loader/babel"
+        ]
       },
       "test": {
         "plugins": [

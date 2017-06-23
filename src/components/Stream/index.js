@@ -1,4 +1,5 @@
 import { connect } from 'react-redux';
+/* import { withRouter } from 'react-router-dom'; */
 import Stream from './presenter';
 
 function mapStateToProps(state) {
@@ -8,4 +9,4 @@ function mapStateToProps(state) {
     };
 }
 
-export default connect(mapStateToProps)(Stream);
+export default /* withRouter( */ connect(mapStateToProps)(Stream) /* ) */;

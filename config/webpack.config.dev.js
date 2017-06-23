@@ -165,8 +165,8 @@ module.exports = {
                     // This is a feature of `babel-loader` for webpack (not Babel itself).
                     // It enables caching results in ./node_modules/.cache/babel-loader/
                     // directory for faster rebuilds.
-                    cacheDirectory: true
-                    // plugins: ['react-hot-loader/babel', 'lodash']
+                    cacheDirectory: true,
+                    plugins: ['react-hot-loader/babel']
                 }
             },
             // "postcss" loader applies autoprefixer to our CSS.

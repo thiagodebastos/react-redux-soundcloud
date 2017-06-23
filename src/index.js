@@ -4,7 +4,9 @@ import { AppContainer } from 'react-hot-loader';
 import { Provider } from 'react-redux';
 import configureStore from './stores/configureStore';
 import * as actions from './actions';
-import Stream from './components/Stream';
+import App from './components/App';
+
+// import { CLIENT_ID, REDIRECT_URL } from './constants/auth';
 
 const rootEl = document.getElementById('root');
 
@@ -17,18 +19,22 @@ const store = configureStore();
 
 store.dispatch(actions.setTracks(tracks));
 
-ReactDOM.render(
-    <AppContainer>
-        <Provider store={store}>
-            <Stream />
-        </Provider>
-    </AppContainer>,
-    rootEl
-);
+const render = Component => {
+    ReactDOM.render(
+        <AppContainer>
+            <Provider store={store}>
+                <Component />
+            </Provider>
+        </AppContainer>,
+        rootEl
+    );
+};
 
+render(App);
+
+//  https://github.com/gaearon/react-hot-loader/tree/master/docs#webpack-2
 if (module.hot) {
-    module.hot.accept();
-    // eslint-disable-next-line global-require
-    const NextApp = require('./components/Stream').default;
-    ReactDOM.render(<NextApp store={store} />, rootEl);
+    module.hot.accept('./components/App', () => {
+        render(App);
+    });
 }
