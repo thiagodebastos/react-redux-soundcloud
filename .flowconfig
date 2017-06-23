@@ -2,17 +2,19 @@
 <PROJECT_ROOT>/public
 <PROJECT_ROOT>/docs
 <PROJECT_ROOT>/build
-<PROJECT_ROOT>/node_modules/styled-components/*
 <PROJECT_ROOT>/node_modules/fbjs/.*
+<PROJECT_ROOT>/node_modules/promise/.*
 <PROJECT_ROOT>/node_modules/stylelint/*
-<PROJECT_ROOT>/node_modules/polished/*
+# <PROJECT_ROOT>/node_modules/styled-components/*
+# <PROJECT_ROOT>/node_modules/polished/*
 <PROJECT_ROOT>/node_modules/protobufjs/*
 
 [include]
 
 [libs]
-styled-components
-polished
+# styled-components
+# polished
+promise
 
 [options]
 esproposal.class_static_fields=enable

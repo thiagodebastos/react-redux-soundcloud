@@ -40,7 +40,7 @@ module.exports = {
         // Note: instead of the default WebpackDevServer client, we use a custom one
         // to bring better experience for Create React App users. You can replace
         // the line below with these two lines if you prefer the stock client:
-        // require.resolve('webpack-dev-server/client') + '?/',
+        // `${require.resolve('webpack-dev-server/client')}?/`,
         // require.resolve('webpack/hot/dev-server'),
         require.resolve('react-dev-utils/webpackHotDevClient'),
         // We ship a few polyfills by default:
@@ -165,8 +165,8 @@ module.exports = {
                     // This is a feature of `babel-loader` for webpack (not Babel itself).
                     // It enables caching results in ./node_modules/.cache/babel-loader/
                     // directory for faster rebuilds.
-                    cacheDirectory: true,
-                    plugins: ['react-hot-loader/babel', 'lodash']
+                    cacheDirectory: true
+                    // plugins: ['react-hot-loader/babel', 'lodash']
                 }
             },
             // "postcss" loader applies autoprefixer to our CSS.

@@ -1,15 +1,13 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Stream from '../Stream';
+import Stream from './presenter';
 
 describe('Stream', () => {
     const props = {
-        tracks: [{ title: 'x' }, { title: 'y' }]
+        tracks: [{ id: 0, title: 'Journey' }, { id: 1, title: 'Neverending' }]
     };
-    it('renders without error', () => {
-        shallow(<Stream />);
-    });
-    it('given two tracks, shows two elements', () => {
+
+    it('shows two elements', () => {
         const element = shallow(<Stream {...props} />);
         expect(element.find('.track')).toHaveLength(2);
     });
