@@ -1,4 +1,8 @@
-import { auth } from './auth';
-import { setTracks } from './track';
+import * as types from './types';
 
-export { auth, setTracks };
+export function filterTable(filter) {
+  return {
+    type: types.FILTER,
+    filter
+  };
+}

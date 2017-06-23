@@ -4,11 +4,11 @@ import Routes from '../routes';
 
 const App = () =>
     <div>
-        <h1>Filter table</h1>
+        <h1>Header</h1>
         {Routes}
         <footer>
             <Link to="/">Home</Link>
-            <Link to="/callback">API callback</Link>
+            <Link to="/about">About</Link>
         </footer>
     </div>;
 
