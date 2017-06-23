@@ -1,8 +1,11 @@
 /* eslint-disable no-underscore-dangle */
 import { createStore, applyMiddleware } from 'redux';
+// import { routerMiddleWare } from 'react-router-redux';
 import rootReducer from '../reducers';
 
-const createStoreWithMiddleware = applyMiddleware()(createStore);
+// const router = routerMiddleWare(history);
+
+const createStoreWithMiddleware = applyMiddleware(/* router */)(createStore);
 
 const configureStore = initialState =>
     createStoreWithMiddleware(

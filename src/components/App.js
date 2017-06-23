@@ -1,18 +1,13 @@
 // @flow
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
-import Stream from './Stream';
-import Callback from './Callback';
 
-function App() {
-    return (
-        <BrowserRouter>
-            <div>
-                <Route exact path="/" component={Stream} />
-                <Route path="/callback" component={Callback} />
-            </div>
-        </BrowserRouter>
-    );
-}
+type Props = {
+    children: React.Element<*>
+};
+
+const App = (props: Props) => {
+    const { children } = props;
+    return <div>{children}</div>;
+};
 
 export default App;
