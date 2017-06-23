@@ -1,1 +1,2 @@
-export const TRACKS_SET = 'TRACKS_SET'; // eslint-disable-line
+export const TRACKS_SET = 'TRACKS_SET';
+export const FILTER = 'FILTER';
